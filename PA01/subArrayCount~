@@ -1,0 +1,56 @@
+/*
+
+
+long * subArrayCount (int Size, int * len)
+{
+	
+	long count = 0;
+	long i = 0;
+	int posn = 0;
+	long * levels =  malloc(sizeof(long) * Size);
+	int length = 0;
+	int stop = 0;
+	//int power2 = 0;
+	//int power3 = 0;
+	long val = 0;
+
+	for(count = 0; count < Size; count++)
+	{
+		stop = 0;
+		i = 0;
+
+		while((i <= count) && (stop != 1))
+		{
+
+			val = pow(2, count-i) * pow(3,i);
+			printf("%lu -> val\n", val);
+
+			if(val < Size)
+			{
+			levels[posn] = val;
+			length++;
+			posn++;
+			}
+
+			if(val > Size)
+			{
+			stop = 1;
+			}
+
+			i++;
+			
+		}
+
+		
+		if((val > Size) && (i == 0))
+		{
+		break;
+		}
+
+	}
+
+	*len = length;
+
+	return (levels);
+}
+*/

@@ -1,0 +1,16 @@
+typedef struct pole{
+	struct pole * o_up;
+	struct pole * o_down;
+	struct pole * o_left;
+	struct pole * o_right;
+	struct pole * pred;
+	int row;
+	int col;
+	int dist;
+	int i_up;
+	int i_down;
+	int i_left;
+	int i_right;
+	int board;
+}pole;
+
